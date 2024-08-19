@@ -1,0 +1,1 @@
+(()=>{"use strict";document.querySelector("h1#title").innerText="webpack"})();
