@@ -1,3 +1,3 @@
-const text = "web";
+const text = "WEB";
 
 export default text;

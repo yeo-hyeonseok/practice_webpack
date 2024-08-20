@@ -1,3 +1,3 @@
-const text = "pack";
+const text = "PACK";
 
 export default text;
