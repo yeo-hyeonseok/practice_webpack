@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 /** 'npx webpack --entry ./src/index.js --output-path ./dist' << 얘랑 같음 */
 module.exports = {
@@ -25,4 +26,19 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      // 어떤 파일을 기준으로 html 파일을 생성할 것인지 설정
+      template: "./src/index.html",
+      // 생성될 파일의 이름 설정
+      filename: "index.html",
+      // html파일에 포함시킬 js파일 번들 이름 적어주면 됨
+      chunks: ["main"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/about.html",
+      filename: "about.html",
+      chunks: ["about"],
+    }),
+  ],
 };
